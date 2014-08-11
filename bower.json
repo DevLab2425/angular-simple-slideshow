@@ -1,0 +1,22 @@
+{
+  "name": "angular-simple-slideshow",
+  "version": "0.0.1",
+  "homepage": "https://github.com/DevLab2425/angular-simple-slideshow",
+  "authors": [
+    "DevLab2425"
+  ],
+  "description": "A simple set of directives that creates a customizable slideshow.",
+  "main": ["angular-simple-slideshow.js", "angular-simple-slideshow.css"],
+  "keywords": [
+    "angular",
+    "slideshow"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
