@@ -1,6 +1,6 @@
 {
   "name": "angular-simple-slideshow",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "title": "Angular Simple Slideshow",
   "description": "A simple set of directives that creates a customizable slideshow.",
   "main": "angular-simple-slideshow.js",
