@@ -1,4 +1,4 @@
-var SlideShow = angular.module('WISE.Directives.SlideShow', ['template/slideshow.html', 'template/slide.html']);
+var SlideShow = angular.module('simple-slideshow', ['template/slideshow.html', 'template/slide.html']);
 
 SlideShow.directive('slideshow', function(){
 	return {
@@ -11,11 +11,11 @@ SlideShow.directive('slideshow', function(){
 				
 			ctrl.addSlide = function addSlide(slide){
 				slides.push(slide);
-			}
+			};
 			
 			ctrl.select = function(slide){
 				$scope.currentslide = slide;
-			}
+			};
 		},
 		controllerAs: 'slideshowCtrl',
 		restrict: 'AE',
@@ -24,13 +24,13 @@ SlideShow.directive('slideshow', function(){
 		link: function($scope, iElm, tAttrs){
 			
 		}
-	}
+	};
 });
 
 SlideShow.directive('slide', ['$parse', function($parse){
 	return {
-		require: '^slideshow', // Array = multiple requires, ? = optional, ^ = check parent elements
-		restrict: 'AE', // E = Element, A = Attribute, C = Class, M = Comment
+		require: '^slideshow',
+		restrict: 'AE',
 		templateUrl: 'template/slide.html',
 		transclude: true,
 		replace: true,
@@ -42,25 +42,25 @@ SlideShow.directive('slide', ['$parse', function($parse){
 					});
 					scope.select = function(slide){
 						slideshowCtrl.select(slide);
-					}
+					};
 					
 					slideshowCtrl.addSlide(scope.slide);
 				},
 				post: function postLink(scope, elm, attrs, slideshowCtrl){
 					slideshowCtrl.select(slideshowCtrl.slides[0]);
 				}
-			}
+			};
 		}
 	};
 }]);
 
 angular.module("template/slideshow.html", []).run(["$templateCache", function($templateCache) {
 	$templateCache.put("template/slideshow.html",
-		'<div class="navigation-controls">'
-		+ '<div class="picture-slides-fade-container">'
-		+ '<div class="picture-slides-image-link"><img class="picture-slides-image" ng-src="{{currentslide.url}}" alt="{{currentslide.name}}" /><p>{{currentslide.name}}</div></div>'
-		+ '</div>'
-		+ '<div class="slides-wrap"><ul ng-transclude></ul></div>'
+		'<div class="navigation-controls">' +
+		'<div class="picture-slides-fade-container">' +
+		'<div class="picture-slides-image-link"><img class="picture-slides-image" ng-src="{{currentslide.url}}" alt="{{currentslide.name}}" /><p>{{currentslide.name}}</div></div>' +
+		'</div>' +
+		'<div class="slides-wrap"><ul ng-transclude></ul></div>'
 	);
 }]);
 
