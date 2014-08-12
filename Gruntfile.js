@@ -54,7 +54,15 @@ module.exports = function(grunt){
 					'angular-simple-slideshow.min.js': ['angular-simple-slideshow.min.js']
 				}
 			}
+		},
+		
+		copy: {
+			example: {
+				src: ['angular-simple-slideshow.js', 'angular-simple-slideshow.css'],
+				dest: 'example/',
+			}
 		}
+		
 	});
 	
 	grunt.registerTask('test', [
@@ -65,7 +73,8 @@ module.exports = function(grunt){
 	grunt.registerTask('build', [
 		'jshint:all',
 		'ngmin',
-		'uglify'
+		'uglify',
+		'copy:example'
 	]);
 	
 	// Default task
