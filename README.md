@@ -45,8 +45,12 @@ angular.module('slideShowExample', ['simple-slideshow'])
 
 Testing is done using Karma Test Runner.
 
-	$ grunt test
+```BASH
+$ grunt test
+```
 	
 ## Release
 
-	$ grunt release
+```BASH
+$ grunt release
+```
