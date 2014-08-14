@@ -13,10 +13,10 @@ Download [angular-simple-slideshow.js](https://raw.githubusercontent.com/DevLab2
 $ bower install angular-simple-slideshow --save
 ```
 
-Load `angular-simple-slideshow.js`, then add the `simple-slideshow` to your Angular app.
+Load `angular-simple-slideshow.js`, then add the `simple-slideshow` module to your application.
 
 ```javascript
-angular.module('app', ['simple-slideshow']);
+angular.module('yourApp', ['simple-slideshow']);
 ```
 	
 ## Usage
@@ -37,7 +37,8 @@ angular.module('slideShowExample', ['simple-slideshow'])
 	.controller('slideShowCtrl', ['$scope', function($scope){
 		$scope.slides = [
 			{name: 'Not my cat.', url: 'https://farm2.staticflickr.com/1318/5114665665_e55b2c2169_n.jpg'},
-			{name: 'Again, not my cat.', url: 'https://farm2.staticflickr.com/1079/901626554_8bc51ec160_n.jpg'}]
+			{name: 'Again, not my cat.', url: 'https://farm2.staticflickr.com/1079/901626554_8bc51ec160_n.jpg'}
+		];
 	}]);
 ```
 
@@ -49,8 +50,9 @@ Testing is done using Karma Test Runner.
 $ grunt test
 ```
 	
-## Release
+## Build
+Will validate then minimize the JS, as well as copy to the example directory. 
 
 ```BASH
-$ grunt release
+$ grunt build
 ```

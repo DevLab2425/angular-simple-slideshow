@@ -3,6 +3,9 @@
   "version": "0.0.3",
   "homepage": "https://github.com/DevLab2425/angular-simple-slideshow",
   "description": "A simple set of directives that creates a customizable slideshow.",
+  "authors": [
+    "DevLab2425"
+  ],
   "main": [
     "angular-simple-slideshow.js",
     "angular-simple-slideshow.css"
