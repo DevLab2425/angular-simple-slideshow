@@ -5,6 +5,9 @@
 
 A simple set of directives that creates a customizable slideshow.
 
+## Demo
+[http://devlab2425.github.io/angular-simple-slideshow/example/slideshow-example.html](http://devlab2425.github.io/angular-simple-slideshow/example/slideshow-example.html)
+
 ## Installation
 
 Download [angular-simple-slideshow.js](https://raw.githubusercontent.com/DevLab2425/angular-simple-slideshow/master/angular-simple-slideshow.js) or install with bower
